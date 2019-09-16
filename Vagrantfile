@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
     vb.memory = "4096"
-	  vb.cpus = "2"
+    vb.cpus = "2"
 
     # Enable clipboard sharing and drag and drop functionality with the host
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
@@ -32,12 +32,12 @@ Vagrant.configure("2") do |config|
   config.vm.provision "apps", type: "shell", inline: <<-APPS
     apt-get update
     apt-get install -y python3-pip ubuntu-desktop ssh-askpass ruby ntp
-	systemctl enable ntp
+    systemctl enable ntp
     gem install cfn-nag
-	  pip3 install --upgrade boto3 awscli ec2instanceconnectcli cfn-lint
+    pip3 install --upgrade boto3 awscli ec2instanceconnectcli cfn-lint
     curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
     sudo dpkg -i session-manager-plugin.deb
-	  snap install --classic code
+    snap install --classic code
     sudo -H -u vagrant bash -c 'code --install-extension ms-python.python'
     sudo -H -u vagrant bash -c 'code --install-extension ms-vsts.team'
     sudo -H -u vagrant bash -c 'code --install-extension kddejong.vscode-cfn-lint'
