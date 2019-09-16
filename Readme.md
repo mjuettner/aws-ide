@@ -1,4 +1,4 @@
-fffff# AWS IDE
+# AWS IDE
 
 This is a basic AWS development environment running on Ubuntu.  It is intended to help save people some time setting up their own development environment and start playing with the AWS CLI, CloudFormation, and various complementary tools.  Once you are more familiar with what you want in your development environment you can go off and build your own.
 
