@@ -42,11 +42,19 @@ If I place my Vagrantfile in C:\vagrant, once the Ubuntu image is built and runn
 
 This is just an easy and convenient way to share files between your host OS and the VM and to also provide protection from losing files if something happens to the Ubuntu VM.  If you're always saving your work to Git or some other location outside of the VM, this is less important.
 
+## Customization
+
+- You can set vb.gui to false if you're not interested in using the Gnome GUI
+- Configure memory and cpu settings by setting vb.memory and vb.cpus to settings you feel are appropriate for your system
+
 ## Installation
 
 - Create a folder somewhere on your system and place the Vagrantfile there
 - Navigate to that folder via command line and issue the 'vagrant up' command
 - Wait for everything to download and build
+    - You will know it's done when your command console where you executed 'vagrant up' returns back to the command prompt
+    - The VirtualBox VM should reboot as a final step and boot up displaying the Gnome GUI
+    - In my tests it takes 20 - 30 minutes
 
 ## Default Ubuntu Credentials
 
