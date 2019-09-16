@@ -1,4 +1,4 @@
-# AWS IDE
+fffff# AWS IDE
 
 This is a basic AWS development environment running on Ubuntu.  It is intended to help save people some time setting up their own development environment and start playing with the AWS CLI, CloudFormation, and various complementary tools.  Once you are more familiar with what you want in your development environment you can go off and build your own.
 
@@ -64,6 +64,11 @@ This is just an easy and convenient way to share files between your host OS and 
 
 - Vagrant should have enabled the Gnome GUI (for using Visual Studio Code), so you should see a VirtualBox window with that GUI that you can log into.
 - Alternately, you can try executing 'vagrant ssh' from the command line to access the VM directly.
+
+## Usage
+
+- Right-click on the desktop and select 'Open Terminal', you can check the AWS CLI is available by executing `aws help`
+- In the Terminal window, launch Visual Studio Code by executing `code`
 
 ## Continuing Usage
 
